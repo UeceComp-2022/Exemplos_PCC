@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const BookList = () => {
+            const storedBooks = JSON.parse(localStorage<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const BookList = () => {
+            const storedBooks = JSON.parse(localStorage.getItem('books')) || [];
+
+            return (
+                React.createElement('div', null,
+                    React.createElement('h1', null, 'Book List'),
+                    React.createElement('ul', null,
+                        storedBooks.map((book, index) =>
+                            React.createElement('li', { key: index },
+                                React.createElement('strong', null, 'Title:'), ' ', book.title, ' ',
+                                React.createElement('br', null),
+                                React.createElement('strong', null, 'ISBN:'), ' ', book.isbn
+                            )
+                        )
+                    )
+                )
+            );
+        };
+
+        ReactDOM.render(React.createElement(BookList), document.getElementById('root'));
+    </script>
+</body>
+</html>
