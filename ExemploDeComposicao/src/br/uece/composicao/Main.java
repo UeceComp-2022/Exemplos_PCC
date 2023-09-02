@@ -1,9 +1,9 @@
-package br.uece.agregacao;
+package br.uece.composicao;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.uece.agregacao.dominio.Jogador;
-import br.uece.agregacao.dominio.TimeFutebol;
+import br.uece.composicao.dominio.Jogador;
+import br.uece.composicao.dominio.TimeFutebol;
 
 public class Main {
     public static void main(String[] args) {

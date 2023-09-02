@@ -1,4 +1,4 @@
-package br.uece.agregacao.dominio;
+package br.uece.composicao.dominio;
 public class Jogador {
   
   private TimeFutebol time;
