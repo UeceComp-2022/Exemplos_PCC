@@ -4,6 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.uece.file.exemplo.dominio.Aluno;
+
 /**
  * Neste exemplo, o ArrayList é armazenado no arquivo 
  * usando ObjectOutputStream, que permite serializar e 
@@ -13,16 +15,16 @@ import java.util.List;
  */
 public class ExemploArrayListArquivoBinario {
     public static void main(String[] args) {
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("Item 1");
-        arrayList.add("Item 2");
-        arrayList.add("Item 3");
+        ArrayList<Aluno> arrayList = new ArrayList<>();
+        arrayList.add(new Aluno("Maria"));
+        arrayList.add(new Aluno("João"));
+        arrayList.add(new Aluno("Cristina"));
 
         // Armazenar o ArrayList em um arquivo binário
         ObjectOutputStream oos = null;
         try {
-            FileOutputStream fos = new FileOutputStream("arraylist.bin");
-            oos = new ObjectOutputStream(fos);
+            FileOutputStream fileOutputStream = new FileOutputStream("alunos.bin");
+            oos = new ObjectOutputStream(fileOutputStream);
             oos.writeObject(arrayList);
         } catch (IOException e) {
             e.printStackTrace();
@@ -41,13 +43,13 @@ public class ExemploArrayListArquivoBinario {
         // Recuperar o ArrayList do arquivo binário
         ObjectInputStream ois = null;
         try {
-            FileInputStream fis = new FileInputStream("arraylist.bin");
-            ois = new ObjectInputStream(fis);
-            List<String> readArrayList = (List<String>) ois.readObject();
+            FileInputStream fileInputStream = new FileInputStream("alunos.bin");
+            ois = new ObjectInputStream(fileInputStream);
+            List<Aluno> readArrayList = (List<Aluno>) ois.readObject();
             
             // Exibir o conteúdo recuperado
-            for (String item : readArrayList) {
-                System.out.println("Item: " + item);
+            for (Aluno item : readArrayList) {
+                System.out.println("Aluno: " + item.getNome());
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();

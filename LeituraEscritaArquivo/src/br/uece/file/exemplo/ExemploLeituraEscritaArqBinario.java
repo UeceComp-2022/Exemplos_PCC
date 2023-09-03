@@ -16,7 +16,7 @@ public class ExemploLeituraEscritaArqBinario {
 
         // Escrever a string em um arquivo binário
         try {
-            FileOutputStream fos = new FileOutputStream("string_binaria.bin");
+            FileOutputStream fos = new FileOutputStream("teste.abin");
             DataOutputStream dos = new DataOutputStream(fos);
             dos.writeUTF(content);
             dos.close();
@@ -26,7 +26,7 @@ public class ExemploLeituraEscritaArqBinario {
 
         // Ler a string de um arquivo binário
         try {
-            FileInputStream fis = new FileInputStream("string_binaria.bin");
+            FileInputStream fis = new FileInputStream("teste.abin");
             DataInputStream dis = new DataInputStream(fis);
             String readContent = dis.readUTF();
             dis.close();

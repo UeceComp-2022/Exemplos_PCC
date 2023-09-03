@@ -20,7 +20,7 @@ public class ExemploLeituraEscritaArqTexto {
 		
 		// Escrever em um arquivo de texto
 		try {
-			FileWriter writer = new FileWriter("texto.txt");
+			FileWriter writer = new FileWriter("meutxt.uab");
 			writer.write("Exemplo de escrita em arquivo de texto.");
 			writer.close();
 		} catch (IOException e) {
@@ -29,7 +29,7 @@ public class ExemploLeituraEscritaArqTexto {
 
 		// Ler de um arquivo de texto
 		try {
-			FileReader reader = new FileReader("texto.txt");
+			FileReader reader = new FileReader("meutxt.uab");
 			int character;
 			while ((character = reader.read()) != -1) {
 				System.out.print((char) character);
