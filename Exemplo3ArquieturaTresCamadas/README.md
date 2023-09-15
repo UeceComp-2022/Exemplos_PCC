@@ -71,15 +71,15 @@ O Eclipse importará o projeto para o seu ambiente de desenvolvimento. Agora voc
 
 ### Passo a Passo para Usar o SQLlint (Armazenamento no arquivo `test.bd`):
 
-****: O SQLlint é uma ferramenta para análise e formatação de consultas SQL. Ele é utilizado para garantir a consistência e a conformidade das consultas SQL em projetos de banco de dados. Última versão: -jdbc-3.43.0.0
+**SQLite**: O SQLite no contexto do Java é um sistema de gerenciamento de banco de dados relacional embutido, amplamente utilizado para aplicativos móveis e de desktop. É leve, não requer um servidor dedicado e é incorporado diretamente nas aplicações Java. Usado para armazenar e gerenciar dados de maneira eficiente, é acessado através de bibliotecas JDBC ou APIs específicas do SQLite para Java, tornando-se uma escolha popular para aplicativos que necessitam de um banco de dados local eficaz.
 
-   - Faça o download e a instalação do  em seu sistema a partir do site oficial.
+   - Faça o download do jar do SQLite em seu sistema a partir do site oficial ou no repositório central do Maven (dá para baixar o jar via link tb). Link par abaixá-la: [sqlite-jdbc-3.43.0.0.jar](https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.43.0.0/sqlite-jdbc-3.43.0.0.jar)
 
-   - Execute o SQLlint e abra o arquivo `test.bd`.
+   - Para adicionar um arquivo JAR ao classpath no Eclipse, acesse as propriedades do projeto, vá para "Java Build Path," na guia "Libraries," adicione o JAR via "Add JARs" ou "Add External JARs."
 
-   - Você pode agora executar consultas SQL no arquivo `test.bd` utilizando o SQLlint.
+   - Você pode agora executar consultas SQL no arquivo `test.bd` utilizando o SQLite.
 
-**DBeaver**: O DBeaver é uma IDE de banco de dados universal que permite gerenciar e interagir com diversos sistemas de gerenciamento de banco de dados.
+**DBeaver**: O DBeaver é uma IDE de banco de dados universal que permite gerenciar e interagir com diversos sistemas de gerenciamento de banco de dados. LInk: [dbeaver.io/download](https://dbeaver.io/download)
 
    - Faça o download e a instalação do DBeaver em seu sistema a partir do site oficial.
 
