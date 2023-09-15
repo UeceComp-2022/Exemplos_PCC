@@ -1,0 +1,5 @@
+CREATE TABLE Tarefa (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT NOT NULL,
+    descricao TEXT NOT NULL
+);
