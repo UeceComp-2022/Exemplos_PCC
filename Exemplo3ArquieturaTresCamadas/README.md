@@ -88,6 +88,22 @@ O Eclipse importará o projeto para o seu ambiente de desenvolvimento. Agora voc
    - Crie uma nova conexão ao banco de dados usando as informações do arquivo `test.bd`. Certifique-se de selecionar o driver de banco de dados adequado.
 
    - Estabeleça a conexão com o banco de dados  e comece a explorar e executar consultas usando o DBeaver.
+     
+
+## Executando o Script SQL
+
+Para criar a tabela no banco de dados SQLite `test.db` usando o DBAVER, siga estas etapas:
+
+1. Baixe o arquivo [script.sql](https://github.com/UeceComp-2022/Exemplos_PCC/blob/main/Exemplo3ArquieturaTresCamadas/script.sql) para o seu computador.
+
+2. Abra o DBAVER e conecte-se ao banco de dados `test.db`.
+
+3. Na interface do DBAVER, abra o arquivo `script.sql` que você baixou anteriormente.
+
+4. Execute o script SQL pressionando o botão "Executar" ou equivalente na interface do DBAVER.
+
+A tabela `Tarefa` será criada no banco de dados `test.db` com as colunas especificadas no script.
+
 
 ## Contribuições:
 
