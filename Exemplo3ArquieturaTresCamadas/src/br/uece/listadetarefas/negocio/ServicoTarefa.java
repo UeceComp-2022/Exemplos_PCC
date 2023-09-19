@@ -7,14 +7,14 @@ import br.uece.listadetarefas.persistencia.RepositorioTarefa;
 
 public class ServicoTarefa {
 
-	private RepositorioTarefa servicoTarefa;
+	private RepositorioTarefa repositorioTarefa;
 
-	public ServicoTarefa(RepositorioTarefa servicoTarefa) {
-		this.servicoTarefa = servicoTarefa;
+	public ServicoTarefa(RepositorioTarefa repositorioTarefa) {
+		this.repositorioTarefa = repositorioTarefa;
 	}
 
 	public void listarTarefas() {
-		List<Tarefa> tarefas = servicoTarefa.listarTarefas();
+		List<Tarefa> tarefas = repositorioTarefa.listarTarefas();
 		if (tarefas.isEmpty()) {
 			System.out.println("Nenhuma tarefa encontrada.");
 		} else {
@@ -35,7 +35,7 @@ public class ServicoTarefa {
 		String descricao = scanner.nextLine();
 
 		Tarefa novaTarefa = new Tarefa(0, titulo, descricao);
-		servicoTarefa.salvarTarefa(novaTarefa);
+		repositorioTarefa.salvarTarefa(novaTarefa);
 		System.out.println("Tarefa criada com sucesso!");
 	}
 
@@ -44,7 +44,7 @@ public class ServicoTarefa {
 		int id = scanner.nextInt();
 		scanner.nextLine(); // Consume the newline
 
-		Tarefa tarefaExistente = servicoTarefa.buscarTarefaPorId(id);
+		Tarefa tarefaExistente = repositorioTarefa.buscarTarefaPorId(id);
 
 		if (tarefaExistente == null) {
 			System.out.println("Tarefa não encontrada.");
@@ -57,7 +57,7 @@ public class ServicoTarefa {
 		String novaDescricao = scanner.nextLine();
 
 		Tarefa tarefaAtualizada = new Tarefa(id, novoTitulo, novaDescricao);
-		servicoTarefa.atualizarTarefa(tarefaAtualizada);
+		repositorioTarefa.atualizarTarefa(tarefaAtualizada);
 		System.out.println("Tarefa atualizada com sucesso!");
 	}
 
@@ -66,14 +66,14 @@ public class ServicoTarefa {
 		int id = scanner.nextInt();
 		scanner.nextLine(); // Consume the newline
 
-		Tarefa tarefaExistente = servicoTarefa.buscarTarefaPorId(id);
+		Tarefa tarefaExistente = repositorioTarefa.buscarTarefaPorId(id);
 
 		if (tarefaExistente == null) {
 			System.out.println("Tarefa não encontrada.");
 			return;
 		}
 
-		servicoTarefa.excluirTarefa(id);
+		repositorioTarefa.excluirTarefa(id);
 		System.out.println("Tarefa removida com sucesso!");
 	}
 }
